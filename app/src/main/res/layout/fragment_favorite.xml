@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_mycollect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:visibility="gone">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/lLayout_no_collect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90px"
+            android:textColor="@color/white"
+            android:textSize="30px"
+            android:lineSpacingExtra="38px"
+            android:maxLines="2"
+            android:gravity="center"
+            android:text="你还没有收藏过菜谱哦~"/>
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_next"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:layout_marginTop="@dimen/px90"
+            android:text="去看看" />
+    </LinearLayout>
+</LinearLayout>

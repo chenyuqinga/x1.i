@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_music_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img_internet_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.fotile.music.widget.ThinBoldTextView
+        android:id="@+id/tv_tip_music_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_music_connect_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110px"
+        android:paddingBottom="21px"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="21px"
+        android:textColor="@drawable/color_txt_select"
+        android:textSize="30px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_music_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110px"
+        android:paddingBottom="21px"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="21px"
+        android:textColor="@drawable/color_txt_select"
+        android:textSize="30px"
+        android:visibility="gone" />
+</LinearLayout>

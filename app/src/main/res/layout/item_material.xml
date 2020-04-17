@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--菜谱食材列表item布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30px">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_material_name"
+        android:layout_width="wrap_content"
+        android:layout_height="38px"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:lineSpacingExtra="38px"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/black_txt"
+        android:textSize="30px"
+        android:layout_alignParentLeft="true"/>
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_material_quantity"
+        android:layout_width="70px"
+        android:layout_height="38px"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/black_txt"
+        android:textSize="30px" />
+    <View
+        android:id="@+id/dot_line"
+        android:layout_width="match_parent"
+        android:layout_height="38px"
+        android:layout_marginTop="68px"
+        android:background="@drawable/list_item_dash" />
+</RelativeLayout>
+

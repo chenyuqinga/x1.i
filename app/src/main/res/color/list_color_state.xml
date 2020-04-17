@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/grey_txt" android:state_enabled="false" /><!---unable-->
+    <item android:color="@color/select_txt" android:state_pressed="true" /><!---pressed-->
+    <item android:color="@color/white_txt"  /><!---default-->
+
+</selector>

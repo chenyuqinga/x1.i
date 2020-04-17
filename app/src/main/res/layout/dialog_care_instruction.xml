@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px80"
+        android:src="@mipmap/img_care_instruction"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px40"
+        android:text="@string/string_care_instruction1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px36"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30"
+        android:text="@string/string_care_instruction2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_close"
+        android:layout_width="200px"
+        android:layout_height="80px"
+        android:layout_marginTop="164px"
+        android:background="@drawable/yellow_btn_background"
+        android:gravity="center"
+        android:text="@string/string_close"
+        android:textSize="@dimen/px30"/>
+
+</LinearLayout>

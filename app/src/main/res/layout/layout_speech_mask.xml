@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor_speech">
+
+    //底部控制栏
+
+    <RelativeLayout
+        android:id="@+id/rl_speech_control"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/iv_close_speech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="130px"
+            android:layout_marginBottom="70px"
+            android:src="@mipmap/icon_speech_close" />
+
+        <ImageView
+            android:id="@+id/iv_speech_anim"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px20" />
+
+        <ImageView
+            android:id="@+id/iv_speech_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="130px"
+            android:layout_marginBottom="70px"
+            android:src="@mipmap/icon_speech_help" />
+    </RelativeLayout>
+
+    //问题
+
+    <TextView
+        android:id="@+id/tv_speech_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130px"
+        android:layout_marginTop="94px"
+        android:layout_marginEnd="130px"
+        android:gravity="center"
+        android:maxWidth="1020px"
+        android:maxLines="3"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="36px" />
+
+    //回答
+
+    <TextView
+        android:id="@+id/tv_speech_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_speech_question"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20px"
+        android:layout_marginEnd="130px"
+        android:maxWidth="570px"
+        android:maxLines="3"
+        android:paddingStart="22px"
+        android:paddingTop="18px"
+        android:paddingEnd="44px"
+        android:paddingBottom="18px"
+        android:scrollbars="vertical"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_tts_content"
+        android:textSize="36px" />
+
+    //烟灶联动
+
+    <LinearLayout
+        android:id="@+id/ll_device_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_speech_control"
+        android:background="#04ffffff"
+        android:orientation="vertical"
+        android:paddingStart="40px"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="79px">
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="设置 >"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_icon_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/px10"
+                android:layout_toEndOf="@id/tv_setting"
+                android:src="@mipmap/icon_link_to_machine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10px"
+                android:layout_toEndOf="@id/iv_icon_link"
+                android:text="设备联动"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+
+            <TextView
+                android:id="@+id/tv_device_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="40px"
+                android:text="烟灶联动"
+                android:textColor="#FFFFFF"
+                android:textSize="30px" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img_device_link_help"-->
+            <!--android:layout_width="40px"-->
+            <!--android:layout_height="40px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginStart="12px"-->
+            <!--android:layout_toEndOf="@+id/tv_device_link"-->
+            <!--android:src="@mipmap/icon_speech_link_help" />-->
+
+            <!--            <com.fotile.x1i.widget.setting.SwitchButton
+                            android:id="@+id/btn_speech_link_switch"
+                            android:layout_width="@dimen/px100"
+                            android:layout_height="@dimen/px50"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="40dp"
+                            app:sb_background="#9A9A9A"
+                            app:sb_button_color="#FFFFFF"
+                            app:sb_checked="true"
+                            app:sb_checked_color="#C8AF70"
+                            app:sb_shadow_effect="false"
+                            app:sb_show_indicator="false" />-->
+
+            <Switch
+                android:id="@+id/btn_speech_link_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="130px"
+                android:textOn=""
+                android:textOff=""
+                android:thumb="@drawable/selector_setting_switch_thumb"
+                android:track="@drawable/selector_setting_switch" />
+
+            <ImageView
+                android:layout_width="520px"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:src="#666666" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_device_link_description"
+            android:layout_width="match_parent"
+            android:layout_height="108px"
+            android:paddingTop="20px"
+            android:paddingEnd="50px"
+            android:paddingBottom="20px"
+            android:text="当烟灶联动开启后，操作灶具时可以联动油烟机"
+            android:textColor="#9A9A9A"
+            android:textSize="26px" />
+
+    </LinearLayout>
+
+    //亮度
+
+    <RelativeLayout
+        android:id="@+id/rl_speech_brightness_setting"
+        android:layout_width="match_parent"
+        android:layout_height="330px"
+        android:layout_above="@id/rl_speech_control"
+        android:background="#04ffffff"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_brightness_title"
+            android:layout_width="match_parent"
+            android:layout_height="79px"
+            android:layout_marginStart="131px">
+
+            <TextView
+                android:id="@+id/tv_setting_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10px"
+                android:text="设置 >"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_icon_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_setting_brightness"
+                android:src="@mipmap/icon_brightness_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10px"
+                android:layout_toEndOf="@id/iv_icon_brightness"
+                android:text="亮度设置"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_brightness_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_speech_brightness_title"
+            android:layout_marginTop="86px">
+
+            <SeekBar
+                android:id="@+id/sb_speech_brightness"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:max="255"
+                android:maxHeight="18px"
+                android:progressDrawable="@drawable/wind_seekbar"
+                android:thumb="@mipmap/seekbar_thumb" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:layout_toLeftOf="@id/sb_speech_brightness"
+                android:src="@mipmap/icon_light_barleft" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@id/sb_speech_brightness"
+                android:src="@mipmap/icon_light_barright" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_speech_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_speech_brightness_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:text="80"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+    </RelativeLayout>
+
+    //声音
+
+    <RelativeLayout
+        android:id="@+id/rl_speech_sound_setting"
+        android:layout_width="match_parent"
+        android:layout_height="330px"
+        android:layout_above="@id/rl_speech_control"
+        android:background="#04ffffff"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_sound_title"
+            android:layout_width="match_parent"
+            android:layout_height="79px"
+            android:layout_marginStart="131px">
+
+            <TextView
+                android:id="@+id/tv_setting_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10px"
+                android:text="设置 >"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/iv_icon_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_setting_sound"
+                android:src="@mipmap/icon_speech_sound" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10px"
+                android:layout_toEndOf="@id/iv_icon_sound"
+                android:text="音量设置"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_sound_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_speech_sound_title"
+            android:layout_marginTop="86px">
+
+            <SeekBar
+                android:id="@+id/sb_speech_sound"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxHeight="18px"
+                android:progressDrawable="@drawable/wind_seekbar"
+                android:thumb="@mipmap/seekbar_thumb" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:layout_toLeftOf="@id/sb_speech_sound"
+                android:src="@mipmap/icon_volume_barleft" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@id/sb_speech_sound"
+                android:src="@mipmap/icon_volume_barright" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_speech_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_speech_sound_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:layout_marginEnd="30px"
+            android:text="80"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+    </RelativeLayout>
+
+    //菜谱
+
+    <RelativeLayout
+        android:id="@+id/rl_speech_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="330px"
+        android:layout_above="@id/rl_speech_control"
+        android:background="#04ffffff"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="79px"
+            android:layout_marginStart="130px"
+            android:layout_marginEnd="130px"
+            android:paddingStart="40px">
+
+            <ImageView
+                android:id="@+id/iv_speech_recipe_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_speech_recipe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10px"
+                android:layout_toEndOf="@id/iv_speech_recipe_title"
+                android:text="菜谱"
+                android:textColor="#9A9A9A"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_speech_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="130px"
+            android:layout_marginEnd="130px"
+            android:layout_marginTop="89px"
+            android:layout_marginBottom="32px" />
+    </RelativeLayout>
+
+    //音乐
+
+    <RelativeLayout
+        android:id="@+id/rl_speech_music"
+        android:layout_width="match_parent"
+        android:layout_height="330px"
+        android:layout_above="@id/rl_speech_control"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="79px"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_speech_music_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_speech_music_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_toEndOf="@id/iv_speech_music_title"
+                android:text="在线音乐"
+                android:textColor="#9A9A9A"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_speech_music_img"
+                android:layout_width="240px"
+                android:layout_height="240px"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="130px" />
+
+            <ImageView
+                android:id="@+id/iv_speech_music_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="41px"
+                android:layout_marginBottom="46px"
+                android:layout_toEndOf="@id/iv_speech_music_img"
+                android:src="@mipmap/img_music_start" />
+
+            <TextView
+                android:id="@+id/tv_speech_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41px"
+                android:layout_marginTop="44px"
+                android:layout_toEndOf="@id/iv_speech_music_img"
+                android:text="稻香"
+                android:textColor="#FFFFFF"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_speech_music_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_speech_music_name"
+                android:layout_marginStart="41px"
+                android:layout_marginTop="18px"
+                android:layout_toEndOf="@id/iv_speech_music_img"
+                android:text="周杰伦"
+                android:textColor="#FFFFFF"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    //帮助页面
+
+    <LinearLayout
+        android:id="@+id/ll_speech_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_speech_control"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80px"
+            android:text="您还可以对我说："
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_speech_example"
+            android:layout_width="520px"
+            android:layout_height="266px"
+            android:layout_marginTop="58px" />
+
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_width="170px"
+            android:layout_height="80px"
+            android:layout_marginTop="66px"
+            android:background="@drawable/rect_btn_style"
+            android:gravity="center"
+            android:text="换一批"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px" />
+
+    </LinearLayout>
+
+</RelativeLayout>

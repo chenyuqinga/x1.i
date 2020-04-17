@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_list_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!--旋转进度条-->
+        <com.fotile.x1i.widget.RotationLoadingView
+            android:id="@+id/img_wifi_connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20px"
+            android:visibility="gone"/>
+        <!--wifename-->
+        <com.fotile.x1i.widget.MarqueeTextView
+            android:id="@+id/txt_wifi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wifename"
+            android:textColor="#FFFFFF"
+            android:textSize="26px"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <!--√-->
+        <ImageView
+            android:id="@+id/img_ok"
+            android:layout_width="34px"
+            android:layout_height="34px"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_wireless_ok"/>
+        <!--锁 表示有无密码-->
+        <ImageView
+            android:id="@+id/img_lock"
+            android:layout_width="34px"
+            android:layout_height="34px"
+            android:layout_marginStart="20px"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_wireless_lock"/>
+        <!--wifi信号强度-->
+        <ImageView
+            android:id="@+id/img_wifi"
+            android:layout_width="34px"
+            android:layout_height="34px"
+            android:layout_marginStart="20px"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_wireless_wifi"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#666666"/>
+
+</LinearLayout>

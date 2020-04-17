@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160px"
+            android:text="用户协议"
+            android:textColor="#ffffff"
+            android:textSize="36px"/>
+
+        <ScrollView
+            android:layout_width="1020px"
+            android:layout_height="300px"
+            android:layout_marginTop="20px"
+            android:scrollbars="none">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_desc"
+                android:textSize="30px"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_confirm"
+        android:layout_width="200px"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80px"
+        android:background="@drawable/yellow_btn_background"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="@drawable/color_txt_select"
+        android:textSize="30px"/>
+
+</RelativeLayout>

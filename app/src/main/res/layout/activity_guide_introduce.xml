@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_welcome"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220px"
+        android:text="功能简介"
+        android:textColor="@color/color_ffffff"
+        android:textSize="48px" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:gravity="center"
+        android:text="为了帮您快速了解FIKS系统，我们为您\n准备了一个快速的功能介绍~"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230px"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_start_skip"
+            style="@style/UnBtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:text="跳过" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_start_setting"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:layout_marginLeft="@dimen/px120"
+            android:text="查看" />
+    </LinearLayout>
+
+</LinearLayout>

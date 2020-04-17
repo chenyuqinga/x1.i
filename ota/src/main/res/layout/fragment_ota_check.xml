@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_ota_tip"
+        android:gravity="center_vertical"
+        android:text="系统升级"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <!--检测结果-无版本更新-->
+    <RelativeLayout
+        android:id="@+id/layout_checked_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_version_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.6"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+    </RelativeLayout>
+
+    <!--检测结果有版本更新-->
+    <LinearLayout
+        android:layout_marginLeft="180px"
+        android:layout_marginRight="180px"
+        android:id="@+id/layout_checked_exist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tip"
+        android:orientation="vertical"
+        >
+
+        <!--目标版本-->
+        <TextView
+            android:id="@+id/txt_version_target"
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:textColor="#ffffff"
+            android:gravity="center_vertical"
+            android:textSize="30px"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="230px"
+            android:background="#000000"
+            android:padding="10px">
+
+            <TextView
+                android:id="@+id/txt_version_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingMultiplier="1.1"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/txt_version_download"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            style="@style/btn_style_select"
+            android:gravity="center"
+            android:text="系统升级"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+    <!--旋转菊花-->
+    <RelativeLayout
+        android:id="@+id/layout_checking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.fotile.ota.view.OtaLoadingView
+            android:id="@+id/img_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

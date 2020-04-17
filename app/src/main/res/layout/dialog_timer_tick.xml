@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:background="@drawable/grey_btn_background"
+            android:gravity="center"
+            android:text="立即结束"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="100px"
+            android:background="@drawable/yellow_btn_background"
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+
+    <com.fotile.x1i.widget.ProgressCircle
+        android:id="@+id/progress_circle"
+        android:layout_width="192px"
+        android:layout_centerInParent="true"
+        android:layout_height="192px"/>
+
+</RelativeLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <!--未绑定页面-->
+    <RelativeLayout
+        android:id="@+id/layout_unbind"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <!--设置页面显示部分-->
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_setting_titie"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:layout_marginTop="90px"
+                android:drawableLeft="@mipmap/icon_setting_title_bind"
+                android:drawablePadding="10px"
+                android:gravity="center_vertical"
+                android:text="远程控制"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+
+            <!--引导页面显示部分-->
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_guide_titie"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:layout_marginTop="90px"
+                android:drawablePadding="10px"
+                android:gravity="center_vertical"
+                android:text="请绑定手机"
+                android:textColor="#ffffff"
+                android:textSize="36px"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="430px"
+                android:orientation="vertical">
+
+                <!--引导页部分提示-->
+                <com.fotile.x1i.widget.StyleTextView
+                    android:id="@+id/txt_guide_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="30px"/>
+
+                <!--绑定成功显示（引导页面显示）-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_binded_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:src="@mipmap/icon_bind_success"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:scaleType="centerInside"
+                        android:layout_marginTop="20px"/>
+
+                    <com.fotile.x1i.widget.StyleTextView
+                        android:text="添加成功"
+                        android:textColor="#ffffff"
+                        android:textSize="36px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <!--二维码显示部分-->
+                <LinearLayout
+                    android:id="@+id/layout_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    >
+                    <!--left-->
+                    <RelativeLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!--生活家二维码-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="80px"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="180px"
+                                android:layout_height="180px"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_upload"/>
+
+                            <com.fotile.x1i.widget.StyleTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30px"
+                                android:text="一、下载生活家APP"
+                                android:textColor="#ffffff"
+                                android:textSize="30px"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="283px"
+                        android:background="#9A9A9A"/>
+
+                    <!--right-->
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <!--扫码绑定二维码部分-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="80px"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="180px"
+                                android:layout_height="180px">
+                                <!--刷新按钮-->
+                                <ImageView
+                                    android:id="@+id/img_qrcode_refresh"
+                                    android:layout_width="50px"
+                                    android:layout_height="50px"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/icon_bind_refresh"/>
+                                <!--网路加载二维码-->
+                                <ImageView
+                                    android:id="@+id/img_qrcode_bind"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"/>
+                                <!--旋转动图-->
+                                <com.fotile.x1i.widget.RotationLoadingView
+                                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/img_qrcode_rotation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    custom:icon_drawable="@mipmap/ic_white_loading"/>
+                            </RelativeLayout>
+
+                            <com.fotile.x1i.widget.StyleTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30px"
+                                android:text="二、打开生活家APP，进入\nfotile+，扫描左侧二维码"
+                                android:textColor="#ffffff"
+                                android:textSize="30px"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--引导页需要现实的按钮-->
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_next"
+            style="@style/BtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80px"
+            android:text="跳过"/>
+    </RelativeLayout>
+
+    <!--已经绑定的页面（设置模块）-->
+
+    <LinearLayout
+        android:id="@+id/layout_binded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_marginTop="90px"
+            android:drawableLeft="@mipmap/icon_setting_title_bind"
+            android:drawablePadding="10px"
+            android:gravity="center_vertical"
+            android:text="远程控制"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginEnd="181px"
+            android:layout_marginStart="181px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="远程控制"
+                android:textColor="@color/white_txt"
+                android:textSize="30px"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Switch
+                android:id="@+id/btn_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:thumb="@drawable/selector_setting_switch_thumb"
+                android:textOn=""
+                android:textOff=""
+                android:track="@drawable/selector_setting_switch"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginEnd="181px"
+            android:layout_marginStart="181px"
+            android:background="@drawable/shape_item_divide_line"/>
+
+        <!--文字部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="181px"
+            android:layout_marginStart="181px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="vertical">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号绑定"
+                    android:textColor="#ffffff"
+                    android:textSize="30px"/>
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="将解除该设备与所有已绑定手机的连接"
+                    android:textColor="#9A9A9A"
+                    android:textSize="26px"/>
+            </LinearLayout>
+
+            <!--解除绑定-->
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_unbind"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20px"
+                android:drawableLeft="@mipmap/icon_setting_unbind"
+                android:gravity="center"
+                android:text="解除绑定"
+                android:textColor="#C8AF70"
+                android:textSize="30px"
+                android:visibility="gone"/>
+
+            <!--旋转动图-->
+
+            <!--旋转动图-->
+            <com.fotile.x1i.widget.RotationLoadingView
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20px"
+                custom:icon_drawable="@mipmap/icon_rotation"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="820px"
+        android:layout_marginTop="100px"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--时-->
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheel_view_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:layout_weight="1"
+            custom:dividerColor="#666666"
+            custom:textColorCenter="#C8AF70"
+            custom:textColorOut="#FFFFFF"
+            custom:textOutSize="36px"
+            custom:textSize="48px"/>
+
+        <!--分-->
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheel_view_minute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:layout_weight="1"
+            custom:dividerColor="#666666"
+            custom:textColorCenter="#C8AF70"
+            custom:textColorOut="#FFFFFF"
+            custom:textOutSize="36px"
+            custom:textSize="48px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:background="@drawable/grey_btn_background"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="100px"
+            android:background="@drawable/yellow_btn_background"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+    <!--文本-->
+    <LinearLayout
+        android:layout_width="820px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230px"
+            android:text="时"
+            android:textColor="#C8AF70"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="380px"
+            android:text="分"
+            android:textColor="#C8AF70"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+</RelativeLayout>

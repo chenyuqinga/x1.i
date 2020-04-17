@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="175px"
+        android:text="如何将移动端视频投到烟机？"
+        android:textColor="#ffffff"
+        android:textSize="36px"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="131px"
+        android:lineSpacingMultiplier="1.8"
+        android:text="第一步\n确保移动端设备和烟机连接统一wifi网络\n第二步\n点击视频播放客户端的投屏按钮，即可在烟机屏幕观看视频"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_confirm"
+        android:layout_width="200px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/yellow_btn_background"
+        android:gravity="center"
+        android:layout_marginTop="140px"
+        android:text="我知道了"
+        android:textColor="@drawable/color_txt_select"
+        android:textSize="30px"/>
+
+
+</LinearLayout>

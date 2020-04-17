@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+//        applicationId "com.fotile.common.z15"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+
+    //-----------------------------------------------------------------------
+
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    //greendao
+    compile 'org.greenrobot:greendao:3.2.0'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //rxjava
+    compile 'io.reactivex:rxandroid:1.0.1'
+    //gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    // switchbutton
+    compile 'ch.ielse:switchbutton:1.0.1'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //gradle转换器
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    //EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //ImageFrame
+    compile 'com.github.yhx810971230:ImageFrame-master-github:1.5'
+    //design
+//    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    //岛式机移植代码
+    compile 'com.ebanswers:sdk-core:2.3.2'
+    compile 'com.ebanswers:iqkitlibrary:1.4.9.6'
+}

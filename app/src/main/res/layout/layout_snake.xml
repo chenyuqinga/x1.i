@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="90px"
+              android:background="@drawable/shape_snake_bar"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="90px"
+        android:layout_height="90px"
+        android:background="@drawable/grey_oval_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_snake"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_snake_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:text="提示语"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+</LinearLayout>

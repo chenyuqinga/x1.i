@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="588px"
+            android:src="@mipmap/img_linkage" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px10"
+            android:text="@string/projection"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30" />
+
+    </LinearLayout>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/px10"
+        android:text="11"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30"
+        android:gravity="left"
+        android:layout_marginLeft="253px"
+        />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/step2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/px10"
+        android:text="11"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30"
+        android:layout_marginTop="@dimen/px40"
+        android:gravity="left"
+        android:layout_marginLeft="253px"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/step3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/px10"
+        android:text="11"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/px26"
+        android:layout_marginTop="@dimen/px10"
+        android:gravity="left"
+        android:layout_marginLeft="253px"/>
+
+</LinearLayout>

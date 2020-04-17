@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_title_notification"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="消息中心"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+        <com.fotile.x1i.widget.HorScrollView
+            android:id="@+id/tabLayout_category"
+            android:layout_width="match_parent"
+            android:layout_height="80px"/>
+
+        <!--清空按钮-->
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/clear"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="180px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_delete"
+            android:drawablePadding="10px"
+            android:gravity="center_vertical"
+            android:text="清空"
+            android:textColor="#FFC8AF70"
+            android:textSize="30px"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

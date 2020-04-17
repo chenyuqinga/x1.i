@@ -1,0 +1,2 @@
+include ':app', ':common', ':jnicontrol', ':ota', ':pickerview', ':bind', ':message', ':recipe', ':music', ':voice', ':serialport', ':blelibrary', ':wifi', ':bluetooth1'
+project(':bluetooth1').projectDir = new File('bluetooth')

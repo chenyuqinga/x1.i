@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_setting_title_light"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="亮度设置"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="430px">
+
+        <com.fotile.x1i.widget.SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="580px"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:layout_toLeftOf="@id/seekbar"
+            android:src="@mipmap/icon_light_barleft"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/seekbar"
+            android:src="@mipmap/icon_light_barright"/>
+    </RelativeLayout>
+
+</LinearLayout>

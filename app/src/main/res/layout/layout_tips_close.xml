@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px300"
+        android:gravity="center"
+        android:text="确认关机"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px36" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30"
+        android:gravity="center"
+        android:text="您有功能还未关闭，确定关机吗？"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px180"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_immediately"
+            style="@style/UnBtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:text="立即关机" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_cancel"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:layout_marginStart="@dimen/px120"
+            android:text="取消" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

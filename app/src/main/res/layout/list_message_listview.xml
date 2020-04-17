@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listview_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_no_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/message_null"
+        android:textColor="@color/white"
+        android:textSize="26px"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lLayout_message_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+        <com.fotile.x1i.widget.RotationLoadingView
+            android:id="@+id/rotation_message_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:icon_drawable="@mipmap/ic_white_loading"/>
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26px"
+            android:textColor="@color/white"
+            android:text="@string/str_loading"
+            android:layout_marginLeft="20px"/>
+    </LinearLayout>
+</RelativeLayout>

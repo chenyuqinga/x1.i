@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">x1i</string>
+    <string name="str_loading">正在加载中……</string>
+    <!--设置模块-->
+    <string name="str_input_hint">请输入密码</string>
+    <string name="str_cancle">取消</string>
+    <string name="str_exit">退出</string>
+    <string name="str_sure">确定</string>
+    <string name="str_join">加入</string>
+    <string name="str_wifi_ignore">是否忽略该网络</string>
+    <string name="str_wifi_ignore_confirm">忽略</string>
+    <string name="str_linkage">设备联动</string>
+    <string name="str_smoke_stove_off">断开连接</string>
+    <string name="str_smoke_stove_off_or_not">是否断开烟灶联动</string>
+    <string name="str_box_add_overtime">添加超时</string>
+    <string name="str_box_add_overtime_tip">连接盒子超时，请在50s内完成盒子上电操作</string>
+    <string name="str_add_again">重新添加</string>
+    <string name="str_tips_one">当语音盒子连接成功后，可以通过语音操作相关设备(此功能需要语音盒子与设备保持在同一网络WiFi下)。</string>
+    <string name="str_close_tips">若关闭烟灶联动,\n智能烹饪与烟灶联动相关功能将不可用</string>
+    <string name="str_tip">提示</string>
+    <string name="str_sure_close">确认关闭</string>
+    <string name="str_delay_off">延时关机</string>
+    <string name="str_delay_time">延时时间</string>
+    <string name="delayed_shutdown_tip">自动延时关机用于烹饪结束后清理厨房残余油烟</string>
+    <string name="str_loading_txt">美味生活开启中…</string>
+    <string name="str_welcome_txt">欢迎使用,智能生活家系统</string>
+    <string name="str_welcome_tv">开启美味烹饪旅程前,\n我们需要您对系统进行简单的设置</string>
+    <string name="str_start_setting">开始设置</string>
+    <string name="item_quicktool_bluetooth">蓝牙音乐</string>
+    <string name="item_quicktool_projection">投屏</string>
+    <string name="item_quicktool_message">消息中心</string>
+    <string name="item_quicktool_lock">锁屏</string>
+    <string name="item_quicktool_timer">定时器</string>
+    <string name="item_quicktool_upkeep">清洁保养</string>
+    <string name="str_fault_f1">出现故障（F2），设备已经通过烟灶联动关闭灶具\n请拨打售后电话 952315</string>
+    <string name="str_weather">晴天 26℃</string>
+    <string name="idle_no_net_digital_clock">N / A</string>
+
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+
+    <!--菜谱模块-->
+    <string name="source_official">方太官方</string>
+    <string name="source_upload">用户菜谱</string>
+    <string name="source_adult">达人秀菜谱</string>
+    <string name="material_major">主料</string>
+    <string name="material_minor">辅料</string>
+    <string name="material_A">A料</string>
+    <string name="material_B">B料</string>
+    <string name="material_C">C料</string>
+    <string name="material_D">D料</string>
+    <string name="material_List">材料清单</string>
+    <string name="collect_recipe">已收藏</string>
+    <string name="cancel_collect_recipe">收藏</string>
+    <string name="recipe">厨房菜谱</string>
+    <string name="recipe_search">搜索菜谱</string>
+    <string name="search">搜索</string>
+    <string name="str_search_empty">抱歉,未搜索到任何菜谱</string>
+
+    <!--快捷工具-->
+    <string name="notification_center">消息中心</string>
+    <string name="notification">通知</string>
+    <string name="memorandum">备忘录</string>
+    <string name="delete">清空</string>
+    <string name="message_null">暂无通知</string>
+    <string name="message_memorandum_null">暂无家庭备忘录</string>
+    <string name="memorandum_form_name">家人</string>
+    <string name="string_care_instruction1">关闭烟机，已开启挡风板</string>
+    <string name="string_care_instruction2">您可以开始清洁保养烟机</string>
+    <string name="string_close">立即结束</string>
+    <string name="tip_unlockscreen">请滑动解锁</string>
+    <string name="projection">投屏</string>
+
+    <!--音乐-->
+    <string name="music_search_hint">搜索音乐</string>
+    <string name="music_search">搜索</string>
+    <string name="music_search_cancel">取消</string>
+    <string name="str_search_music_empty">抱歉,暂无您搜索的资源</string>
+    <string name="str_refresh">刷新</string>
+    <string name="str_network_disabled">网络连接超时</string>
+    <string name="unknown_author">作者未知</string>
+    <string name="str_connect_network">去连接</string>
+    <string name="network_error">网络连接异常，请检查网络</string>
+    <string name="str_look">去看看</string>
+
+    <!--盒子配网异常-->
+    <string name="str_box_added_failure">您还可以：1.尝试重启烟机；2.拨打售后电话 4000-315-315</string>
+    <string name="str_box_udp_time_out">您还可以：1.检查盒子是否放置正确；\n2.尝试重置盒子（具体方法见说明书）;3.确认设备网络连接是否正常</string>
+    <string name="str_box_home_id_illegal">设备所属家庭不一致，请重置盒子并重新添加</string>
+    <string name="str_box_added_timeout">连接盒子超时 \n请在50s内完成盒子上的操作</string>
+    <string name="str_box_wifi_timeout">wifi连接失败 \n请确认网络连接是否正常</string>
+    <string name="str_boxed_disconnect">设备所属家庭变更，请重置盒子（具体方法见说明书）并重新添加</string>
+    <string name="str_box_network_change">烟机网路连接变化，请重新添加盒子</string>
+    <string name="str_box_add_time_out_title">添加超时</string>
+    <string name="str_box_add_fail_title">添加失败</string>
+    <string name="str_box_disconnect_title">语音助手连接断开</string>
+    <string name="str_box_network_change_reconnect">烟机网络连接变化，\n请重新添加语音助手</string>
+    <string name="str_box_connect_note_line1">请将语音助手放置在指定位置</string>
+    <string name="str_box_connect_note_line2">指示灯不是橙色长亮？您可以对语音助手说：“打开配网模式”</string>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/px40"
+    android:paddingTop="@dimen/px90"
+    android:paddingEnd="@dimen/px40"
+    android:paddingBottom="@dimen/px26">
+
+    <RelativeLayout
+        android:id="@+id/layout_main_recipe"
+        android:layout_width="@dimen/px390"
+        android:layout_height="@dimen/px520"
+        android:background="@mipmap/image_main_recipe"
+        android:gravity="center_horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/px30"
+            android:text="厨房菜谱"
+            android:textColor="@color/select_txt"
+            android:textSize="@dimen/px26" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/px20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px290"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_main_music"
+                android:layout_width="@dimen/px385"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/px30"
+                    android:text="在线音乐"
+                    android:textColor="@color/select_txt"
+                    android:textSize="@dimen/px26" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_main_video"
+                android:layout_width="@dimen/px385"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/px20"
+                android:background="@mipmap/image_main_video"
+                android:gravity="center_vertical">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/px30"
+                    android:text="在线影音"
+                    android:textColor="@color/select_txt"
+                    android:textSize="@dimen/px26" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="210px"
+            android:layout_marginTop="@dimen/px20">
+
+            <RelativeLayout
+                android:id="@+id/layout_main_quick"
+                android:layout_width="@dimen/px385"
+                android:layout_height="match_parent"
+                android:background="@mipmap/image_main_quick"
+                android:gravity="center_vertical">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/px30"
+                    android:text="快捷工具"
+                    android:textColor="@color/select_txt"
+                    android:textSize="@dimen/px26" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_main_setting"
+                android:layout_width="@dimen/px385"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/px20"
+                android:background="@mipmap/image_main_setting"
+                android:gravity="center_vertical">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/px30"
+                    android:text="系统设置"
+                    android:textColor="@color/select_txt"
+                    android:textSize="@dimen/px26" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

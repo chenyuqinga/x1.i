@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <!--设置页面显示wifi标题-->
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_wifi_setting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_tag_wifi"
+        android:drawablePadding="5px"
+        android:gravity="center_vertical"
+        android:text="WIFI"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+    <!--引导页显示wifi标题-->
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_wifi_guide_title"
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px"
+        android:drawablePadding="5px"
+        android:gravity="center_vertical"
+        android:text="联网设置"
+        android:textColor="#ffffff"
+        android:textSize="36px"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="920px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+     >
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="WIFI功能"
+            android:textColor="#ffffff"
+            android:textSize="30px" />
+        <com.fotile.x1i.widget.RotationLoadingView
+            android:id="@+id/rotation_loading"
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="151px"
+            custom:icon_drawable="@mipmap/icon_rotation"/>
+        <Switch
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/selector_setting_switch_thumb"
+            android:track="@drawable/selector_setting_switch"/>
+    </RelativeLayout
+    >
+
+    <View
+        android:layout_width="920px"
+        android:layout_height="1px"
+        android:background="#C8AF70"/>
+
+    <com.fotile.x1i.widget.setting.WifiListView
+        android:id="@+id/list_wifi"
+        android:layout_width="920px"
+        android:layout_height="380px"
+        android:divider="@null"
+        android:scrollbars="none"/>
+
+    <!--引导页需要显示的两个按钮-->
+    <LinearLayout
+        android:id="@+id/layout_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_jump"
+            style="@style/UnBtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:text="跳过"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_next"
+            style="@style/BtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="180px"
+            android:textColor="#FF666666"
+            android:textSize="30px"
+            android:background="@drawable/grey1_btn_background"
+            android:text="下一步"/>
+    </LinearLayout>
+</LinearLayout>

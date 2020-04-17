@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!--菜谱准备步骤列表item布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="61px">
+
+    <!---当前步骤-->
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/current_cook_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_txt"
+        android:textSize="30px"
+        android:text="1111"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40px" />
+    <!--菜谱图片-->
+    <ImageView
+        android:id="@+id/img_cook_recipe"
+        android:layout_width="590px"
+        android:layout_height="393px"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="88px"/>
+    <!--描述-->
+    <ScrollView
+        android:layout_width="460px"
+        android:layout_height="360px"
+        android:layout_marginLeft="660px"
+        android:layout_marginTop="108px"
+        android:fadingEdge="vertical"
+        android:scrollbarSize="2px"
+        android:scrollbars="vertical">
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_cook_step_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:textColor="@color/grey_txt"
+            android:textSize="30px" />
+    </ScrollView>
+</RelativeLayout>
+

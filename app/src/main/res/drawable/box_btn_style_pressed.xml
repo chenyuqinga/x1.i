@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--所有按钮统一style-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00000000" />
+
+    <stroke
+        android:width="2px"
+        android:color="#C8AF70" />
+
+    <corners android:radius="40px" />
+
+    <padding
+        android:bottom="19px"
+        android:left="40px"
+        android:right="40px"
+        android:top="19px" />
+</shape>

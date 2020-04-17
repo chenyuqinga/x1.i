@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@mipmap/icon_recipe_title_tag"
+            android:drawablePadding="10px"
+            android:gravity="center_vertical"
+            android:text="厨房菜谱"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_recipe_search"
+            android:paddingLeft="15px"
+            android:layout_width="340px"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:background="@drawable/rect_edit_search"
+            android:drawableLeft="@mipmap/icon_search"
+            android:drawablePadding="15px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:text="搜索菜谱"
+            android:textColor="#9A9A9A"
+            android:textSize="26px">
+        </com.fotile.x1i.widget.StyleTextView>
+    </RelativeLayout>
+
+
+    <!--菜谱分类-->
+    <com.fotile.x1i.widget.HorScrollView
+        android:id="@+id/tabLayout_category"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+
+    </com.fotile.x1i.widget.HorScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

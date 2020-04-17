@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="588px"
+            android:src="@mipmap/img_recipe" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px10"
+            android:text="@string/recipe"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_marginTop="@dimen/px44"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/search_column"
+            android:layout_width="520px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="270px">
+
+            <ImageView
+                android:id="@+id/img_search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="22px"
+                android:src="@mipmap/img_search" />
+
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/editext_round"
+                android:hint="@string/recipe_search"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="74px"
+                android:singleLine="true"
+                android:textColor="@color/white_txt"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="26px" />
+
+            <ImageView
+                android:id="@+id/img_delete_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="22px"
+                android:src="@mipmap/img_recipe_delete" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="92px"
+            android:layout_height="60px"
+            android:layout_marginLeft="@dimen/px20"
+            android:background="@drawable/yellow_btn_background1"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@color/white_txt"
+            android:textSize="@dimen/px26"/>
+
+        <TextView
+            android:id="@+id/btn_exit"
+            android:layout_width="92px"
+            android:layout_height="60px"
+            android:layout_marginLeft="@dimen/px20"
+            android:background="@drawable/yellow_btn_background2"
+            android:gravity="center"
+            android:text="@string/str_cancle"
+            android:textColor="@color/white_txt"
+            android:textSize="@dimen/px26"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lLayout_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22px"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.LineWrapLayout
+            android:id="@+id/history_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270px"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:textColor="#FFFFFF"
+            android:textSize="26px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px40" />
+
+        <LinearLayout
+            android:id="@+id/lLayout_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="376px"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_search_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/tv_music_search_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/str_search_empty"
+                android:textColor="@color/white"
+                android:textSize="38px" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

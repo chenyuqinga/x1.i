@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px100"
+        android:text="烟灶联动设置"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px36" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="20px"
+        android:gravity="center_vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="42px"
+            android:text="当烟灶联动开启后，操作灶具时可以联动油烟机"
+            android:textColor="#ffffff"
+            android:textSize="30px" />
+        <!--旋转进度-->
+        <com.fotile.x1i.widget.RotationLoadingView
+            android:id="@+id/search_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <!--列表-->
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="920px"
+        android:layout_height="280px"
+        android:layout_gravity="center_horizontal"
+        android:divider="#D6D6D6"
+        android:dividerHeight="1px" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_none_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="280px"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="未搜索到配对信息"
+        android:textColor="#ffffff"
+        android:textSize="30px"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <com.fotile.x1i.widget.RotationLoadingView xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rotation_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:icon_drawable="@mipmap/icon_clear_tag"
+            android:visibility="gone"/>
+        <!--重新搜索-->
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="重新搜索"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50px"
+        android:drawableLeft="@mipmap/icon_warn"
+        android:drawablePadding="@dimen/px20"
+        android:gravity="center_vertical"
+        android:text="该功能需要保持灶具与烟机同一wifi下"
+        android:textColor="#C8AF70"
+        android:textSize="30px" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_jump"
+            style="@style/UnBtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:text="跳过" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_next"
+            style="@style/BtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="180px"
+            android:text="下一步"
+            android:textColor="#FF666666"
+            android:textSize="30px"
+            android:background="@drawable/grey1_btn_background"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_setting_title_time"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="系统时间"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+    <!--联网时钟-->
+    <LinearLayout
+        android:id="@+id/layout_net_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="310px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="74px"
+            android:orientation="vertical">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="30px"
+                android:text="北京时间"
+                android:textColor="#ffffff"
+                android:textSize="36px"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_net_time"
+                android:layout_width="wrap_content"
+                android:layout_height="140px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15px"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="95px"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_am_pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingRight="30px"
+                android:text="PM"
+                android:textColor="#ffffff"
+                android:textSize="36px"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--未联网时间-->
+    <LinearLayout
+        android:id="@+id/layout_local_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--选择日期-->
+        <RelativeLayout
+            android:id="@+id/relate_set_date"
+            android:layout_width="917px"
+            android:layout_height="80px"
+            android:background="@drawable/color_background_select">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="日期"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/icon_arrow_right_yellow"
+                android:gravity="center_vertical"
+                android:text="请选择"
+                android:textColor="#C8AF70"
+                android:textSize="30px"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="917px"
+            android:layout_height="1px"
+            android:background="#C8AF70"/>
+        <!--选择时间-->
+        <RelativeLayout
+            android:id="@+id/relate_set_time"
+            android:layout_width="917px"
+            android:layout_height="80px"
+            android:background="@drawable/color_background_select">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="时间"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/icon_arrow_right_yellow"
+                android:gravity="center_vertical"
+                android:text="请选择"
+                android:textColor="#C8AF70"
+                android:textSize="30px"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="917px"
+            android:layout_height="1px"
+            android:background="#C8AF70"/>
+    </LinearLayout>
+</LinearLayout>

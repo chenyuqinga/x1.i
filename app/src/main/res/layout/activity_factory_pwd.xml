@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_password_connecting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_factory_pwd_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50px">
+
+        <Button
+            android:id="@+id/btn_factory_pwd_back"
+            android:layout_width="120px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:background="@color/transprant"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="36px"/>
+
+        <Button
+            android:id="@+id/btn_factory_pwd_sure"
+            android:layout_width="120px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:background="@color/transprant"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="36px"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/factory_pwd_edit"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@+id/layout_factory_pwd_top"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="55px"
+        android:hint="请输入管理员密码"
+        android:imeOptions="flagNoExtractUi|actionNext"
+        android:inputType="textWebPassword|numberPassword"
+        android:paddingLeft="20px"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="36px"
+        android:visibility="visible"/>
+
+</RelativeLayout>

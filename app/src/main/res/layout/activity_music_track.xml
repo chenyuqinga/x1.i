@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/rl_music_online_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px90">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_music_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:src="@mipmap/icon_music_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_toRightOf="@id/iv_music_icon"
+                android:text="厨房电台"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--列表和标题-->
+    <LinearLayout
+        android:id="@+id/lLayout_music_track_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_music_online_top"
+        android:layout_marginTop="@dimen/px10"
+        android:orientation="vertical">
+
+        <com.fotile.music.widget.ThinBoldTextView
+            android:id="@+id/tv_category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/music_album"
+            android:textSize="26px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_track"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0px"
+            android:layout_marginRight="0px" />
+    </LinearLayout>
+    <!--网络连接失败-->
+    <LinearLayout
+        android:id="@+id/lLayout_music_track_tip_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336px"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_internet_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/img_internet_off" />
+
+        <com.fotile.music.widget.ThinBoldTextView
+            android:id="@+id/tv_music_track_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40px"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_music_track_connect_network"
+            android:layout_width="170px"
+            android:layout_height="80px"
+            android:layout_marginTop="110px"
+            android:background="@drawable/bg_music_network"
+            android:gravity="center"
+            android:text="@string/str_connect_network"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_music_refresh"
+            android:layout_width="170px"
+            android:layout_height="80px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110px"
+            android:background="@drawable/bg_music_network"
+            android:gravity="center"
+            android:text="@string/str_refresh"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

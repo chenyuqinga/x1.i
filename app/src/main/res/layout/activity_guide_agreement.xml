@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100px"
+            android:text="用户使用协议"
+            android:textColor="#ffffff"
+            android:textSize="36px"/>
+
+        <ScrollView
+            android:layout_width="920px"
+            android:layout_height="320px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40px"
+            android:background="#000000">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px"
+                android:text="确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络确保移动端设备和烟机连接同一wifi网络，确保移动端设备和烟机连接同一wifi网络 确保移动端设备和烟机连接同一wifi网络 确保移动端设备和烟机连接同一wifi网络 确保移动端设备和烟机连接同一wifi网络，确保移动端设备和烟机连接同一wifi网络 确保移动端设备和烟机连接同一wifi网络"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="920px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20px">
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="我已阅读并同意《方太用户使用协议》"
+                android:textColor="#ffffff"
+                android:textSize="30px"/>
+
+            <CheckBox
+                android:id="@+id/check_box"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15px"
+                android:layout_toLeftOf="@+id/right"
+                android:background="@drawable/checkbox_style"
+                android:button="@null"
+                android:checked="false"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_next"
+        style="@style/BtnStyle"
+        android:layout_width="200px"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80px"
+        android:text="下一步"
+        android:textColor="#FF666666"
+        android:textSize="30px"
+        android:background="@drawable/grey1_btn_background" />
+</RelativeLayout>

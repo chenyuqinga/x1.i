@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_setting_title_clear"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="清除缓存"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="810px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:lineSpacingMultiplier="1.2"
+        android:text="清除所有因网络请求产生的数据，但不清除我的菜谱下的列表图片、名称及请求参数。"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <RelativeLayout
+        android:layout_width="293px"
+        android:layout_height="80px"
+        android:layout_marginTop="100px"
+        android:background="@drawable/yellow_btn_background">
+
+        <LinearLayout
+            android:id="@+id/layout_clear_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.fotile.x1i.widget.RotationLoadingView
+                android:id="@+id/rotation_loading"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                custom:icon_drawable="@mipmap/icon_clear_tag"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:gravity="center"
+                android:text="清除缓存"
+                android:textColor="@drawable/color_txt_select"
+                android:textSize="30px"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

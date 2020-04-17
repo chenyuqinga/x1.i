@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--菜谱图片背景-->
+    <ImageView
+        android:id="@+id/img_recipe_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="1160px"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px100"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_recipe_detail_desc"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/px20"
+                android:layout_marginBottom="284px"
+                android:background="@drawable/rect_white_bg">
+            <include layout="@layout/item_recipe_materiall_list"></include>
+
+            <include layout="@layout/item_recipe_ready_step"></include>
+
+            <include layout="@layout/item_recipe_cook_step"></include>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_collect_recipe"
+        android:layout_width="210px"
+        android:layout_height="90px"
+        android:layout_marginLeft="1010px"
+        android:layout_marginTop="526px"
+        android:background="@drawable/yellow_btn_background">
+
+        <ImageView
+            android:id="@+id/img_recipe_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px30"
+            android:src="@mipmap/img_collect_recipe" />
+
+        <TextView
+            android:id="@+id/tv_recipe_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80px"
+            android:text="@string/collect_recipe"
+            android:textSize="@dimen/px30" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

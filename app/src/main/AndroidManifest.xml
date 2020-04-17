@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fotile.x1i">
+    <!--android:sharedUserId="android.uid.system">-->
+    <!--正式打包加上权限-->
+    <!-- android:sharedUserId="android.uid.system"-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permisDelayShutdownDialogActivitysion.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SHUTDOWN" /> 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--强制关闭应用-->
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppCustomTheme">
+        <activity android:name=".activity.guide.GuideLoadingActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.MainActivity" android:launchMode="singleTask"></activity>
+        <!--设置页面-->
+        <activity android:name=".activity.setting.SettingActivity"></activity>
+        <activity android:name=".activity.setting.WifiListActivity"></activity>
+        <activity android:name=".activity.setting.TimeSettingActivity"></activity>
+        <activity android:name=".activity.setting.DeviceLinkageActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.setting.LightActivity"></activity>
+        <activity android:name=".activity.setting.VolumeActivity"></activity>
+        <activity android:name=".activity.setting.ClearCacheActivity"></activity>
+        <activity android:name=".activity.setting.AwaitActivity"></activity>
+        <activity android:name=".activity.setting.ResetFactoryActivity"></activity>
+        <activity android:name=".activity.setting.AboutActivity"></activity>
+        <activity android:name=".activity.setting.DelayOffActivity"></activity>
+        <activity android:name=".activity.setting.HelpActivity"></activity>
+        <activity android:name=".activity.setting.LTActivity"></activity>
+        <activity android:name=".activity.setting.DeviceBindActivity"></activity>
+        <activity android:name=".activity.ota.OtaMainActivity"></activity>
+        <!--开机引导-->
+        <activity android:name=".activity.guide.GuideWelcomeActiivty"></activity>
+        <activity android:name=".activity.guide.link.GuideSmokeLinkAskActivity"></activity>
+        <activity android:name=".activity.guide.link.GuideSmokeLinkListActivity"></activity>
+        <activity android:name=".activity.guide.introduce.GuideAgreementActivity"></activity>
+        <activity android:name=".activity.guide.box.GuideBoxLinkingActivity"></activity>
+        <activity android:name=".activity.guide.box.GuideBoxLinkPreActivity"></activity>
+        <activity android:name=".activity.guide.introduce.GuideIntroduceActivity"></activity>
+        <activity android:name=".activity.guide.introduce.GuideIntroducePageActivity"></activity>
+        <!--设备控制-->
+        <activity android:name=".activity.control.LampActivity" android:launchMode="singleTop"></activity>
+        <activity android:name=".activity.control.WindControlActivity" android:launchMode="singleTop"></activity>
+        <activity android:name=".activity.control.CruiseActivity" android:launchMode="singleTop"></activity>
+        <!--工程模式-->
+        <activity android:name=".activity.factory.FactoryPWDActivity"></activity>
+        <activity android:name=".activity.factory.FactoryEnginActivity"></activity>
+        <!--菜谱-->
+        <activity android:name=".activity.recipe.RecipesCategoryActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.recipe.RecipesDetailsActivity"></activity>
+        <activity android:name=".activity.recipe.RecipeSearchActivity"></activity>
+        <!--快捷工具-->
+        <activity android:name=".activity.quicktool.QuickToolActivity"></activity>
+        <activity android:name=".activity.quicktool.message.MessageActivity"></activity>
+        <activity android:name=".activity.quicktool.ProjectionScreenActivity"></activity>
+        <!--屏保时钟-->
+        <activity android:name=".activity.screensaver.AwaitClockActivity" android:launchMode="singleTop" />
+        <activity android:name=".activity.screensaver.DigitalClockActivity" android:launchMode="singleTop"/>
+        <activity android:name=".activity.screensaver.VideoViewActivity"></activity>
+        <activity android:name=".activity.music.MusicOnlineActivity" />
+        <activity android:name=".activity.music.MusicSearchActivity" />
+        <activity android:name=".activity.music.MusicTrackActivity" />
+        <activity android:name=".activity.music.MusicPlayActivity" />
+        <!--产检-->
+        <activity android:name=".activity.control.FactoryCheckActivity"></activity>
+        <!--dui音乐-->
+        <activity android:name=".activity.music.DuiMusicPlayActivity" />
+        <!--ble蓝牙音箱-->
+       <!-- <activity android:name=".activity.quicktool.ble.BleListActiivty"></activity>-->
+        <activity android:name=".activity.quicktool.ble.BleListActiivty1"></activity>
+        <!--烟灶联动服务-->
+        <service android:name=".server.wifilink.LinkServer"></service>
+        <!--产线自检服务-->
+        <service android:name=".server.ProductionLineServer"></service>
+        <!--定时器倒计时服务-->
+        <service android:name=".server.TimerServer"></service>
+        <!--屏保服务-->
+        <service android:name=".server.screensaver.ScreenSaverService"></service>
+        <!--蓝牙服务-->
+        <service android:name=".server.BleServer"></service>
+        <!--电源键上报短按广播-->
+        <!--<receiver android:name=".receiver.PowerReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.android.action.POWERKEY_TOUCH"></action>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--控制息屏的广播-->
+        <receiver
+            android:name="com.ebanswers.sdk.util.sleep.SleepAdminReceiver"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <!--媒体按钮接收器-->
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!--Glide配置类-->
+        <meta-data
+            android:name="com.fotile.x1i.config.GlideModelConfig"
+            android:value="GlideModule" />
+        <!--ota配置校验包名-->
+        <meta-data
+            android:name="ota_check_package"
+            android:value="com.fotile.x1i" />
+    </application>
+
+</manifest>

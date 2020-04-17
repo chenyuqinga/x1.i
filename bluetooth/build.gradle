@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.yhx810971230'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+//        applicationId "fotile.bleclient"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/downloaderlib.jar')
+
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    //EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+
+    compile project(':common')
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ota_txt"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OTA"
+            android:textSize="30px"/>
+
+        <TextView
+            android:id="@+id/cloud_txt"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="物联网云平台"
+            android:textSize="30px"/>
+
+        <TextView
+            android:id="@+id/recipe_txt"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="菜谱云平台"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/ota_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/ota_online"
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:checked="true"
+                    android:text="线上环境"/>
+
+                <RadioButton
+                    android:id="@+id/ota_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:text="测试环境"/>
+
+                <RadioButton
+                    android:id="@+id/ota_develop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:text="开发环境"/>
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/cloud_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/cloud_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:text="线上环境"/>
+
+                <RadioButton
+                    android:id="@+id/cloud_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:text="测试环境"/>
+
+                <RadioButton
+                    android:id="@+id/cloud_develop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:text="开发环境"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/recipe_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/recipe_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:text="线上环境"/>
+
+                <RadioButton
+                    android:id="@+id/recipe_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:checked="true"
+                    android:text="测试环境"/>
+
+                <RadioButton
+                    android:id="@+id/recipe_develop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:layout_marginTop="30px"
+                    android:text="开发环境"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="release模式"
+            android:textSize="30px"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="debug模式"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/relaeseAndDebug_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/release_mode"
+            android:layout_width="0px"
+            android:layout_height="50px"
+            android:layout_weight="1"
+            android:text="关闭Bugly和Log"/>
+
+        <RadioButton
+            android:id="@+id/debug_mode"
+            android:layout_width="0px"
+            android:layout_height="50px"
+            android:layout_weight="1"
+            android:text="打开Bugly和Log"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="返回"/>
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="确认"/>
+</LinearLayout>

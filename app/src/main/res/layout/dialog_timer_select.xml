@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="520px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true"
+            android:background="#666666"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100px"
+            android:background="#666666"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:text="分钟"
+            android:textSize="36px"
+            android:textColor="#C8AF70"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="300px"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.bigkoo.pickerview.lib.WheelView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/wheel_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        custom:dividerColor="@color/wheel_view_divider_color"
+        custom:textColorCenter="@color/select_item"
+        custom:textColorOut="@color/wheel_view_out_color"
+        custom:textOutSize="36px"
+        custom:textSize="30px"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:background="@drawable/grey_btn_background"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="100px"
+            android:background="@drawable/yellow_btn_background"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"/>
+    </LinearLayout>
+</RelativeLayout>

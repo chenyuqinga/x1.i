@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px80"
+        android:drawableLeft="@mipmap/icon_quick_tool"
+        android:gravity="center"
+        android:text="快捷工具"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="@dimen/px800"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px60"
+        android:columnWidth="@dimen/px104"
+        android:horizontalSpacing="@dimen/px200"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/px60">
+
+    </GridView>
+
+</LinearLayout>

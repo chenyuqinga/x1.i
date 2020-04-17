@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="tran">#00FFFFFF</color>
+    <color name="white_txt">#FFFFFF</color>
+    <color name="select_txt">#C8AF70</color>
+    <color name="select_item">#C8AF70</color>
+
+    <color name="wheel_view_out_color">#4CFFFFFF</color>
+    <color name="wheel_view_divider_color">#4Ce1c79b</color>
+    <color name="white_half">#80FFFFFF</color>
+
+    <color name="button_primary_color">#C8AF70</color>
+    <color name="button_primary_color_dark">#FFC8AF70</color>
+    <color name="button_off_color">#FFFFFF</color>
+    <color name="button_off_color_dark">#FFFFFFFF</color>
+    <color name="color_split_line">#FF666666</color>
+    <color name="transprant">#00000000</color>
+    <color name="color_9a9a9a">#FF9A9A9A</color>
+    <color name="color_c8af70">#FFC8AF70</color>
+    <color name="color_ffffff">#FFFFFF</color>
+    <color name="color_666666">#666666</color>
+    <color name="black_txt">#FF1F1F1F</color>
+    <color name="grey_txt">#FF666666</color>
+    <color name="search_history_hint_color">#FF9A9A9A</color>
+    <color name="un_select_txt">#9A9A9A</color>
+    <color name="music_album">#E1C79B</color>
+</resources>

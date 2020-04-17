@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <!-- 表示shape的四个角的角度-->
+    <corners android:radius="5px"/>
+    <stroke android:width="0px"></stroke>
+    <solid
+        android:color="#ffffff"/>
+
+</shape>

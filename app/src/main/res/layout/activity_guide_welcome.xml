@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg_welcome"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px181"
+            android:drawablePadding="@dimen/px46"
+            android:drawableTop="@mipmap/image_fiks_logo"
+            android:gravity="center"
+            android:text="@string/str_welcome_txt"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/px36"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px52"
+            android:gravity="center"
+            android:text="@string/str_welcome_tv"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/px30"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_start_setting"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:layout_marginTop="@dimen/px167"
+            android:text="@string/str_start_setting"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_factory_test"
+        android:layout_width="500px"
+        android:layout_height="220px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>

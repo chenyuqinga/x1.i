@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_setting_title_await"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="待机画面"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/current_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px36"
+        android:textColor="#FFC8AF70"
+        android:text="1111"
+        android:textSize="@dimen/px30"/>
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#C8AF70"
+        android:textSize="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="65px"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linear_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

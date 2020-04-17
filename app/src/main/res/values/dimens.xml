@@ -1,0 +1,53 @@
+<resources>
+
+    <!--上下左右往内缩进边距，和视源google输入法内缩边距一致-->
+    <dimen name="screen_margin">0px</dimen>
+    <!--状态栏高度-->
+    <dimen name="state_bar_height">90px</dimen>
+    <!--bottom栏高度-->
+    <dimen name="bottom_height">164px</dimen>
+    <!--箭头高度-->
+    <dimen name="arrow_height">60px</dimen>
+    <!--箭头宽度-->
+    <dimen name="arrow_width">80px</dimen>
+
+    <dimen name="px90">90px</dimen>
+    <dimen name="px44">44px</dimen>
+    <dimen name="px54">54px</dimen>
+    <dimen name="px26">26px</dimen>
+    <dimen name="px20">20px</dimen>
+    <dimen name="px34">34px</dimen>
+    <dimen name="px40">40px</dimen>
+    <dimen name="px520">520px</dimen>
+    <dimen name="px390">390px</dimen>
+    <dimen name="px30">30px</dimen>
+    <dimen name="px290">290px</dimen>
+    <dimen name="px385">385px</dimen>
+    <dimen name="px800">800px</dimen>
+    <dimen name="px50">50px</dimen>
+    <dimen name="px70">70px</dimen>
+    <dimen name="px250">250px</dimen>
+    <dimen name="px46">46px</dimen>
+    <dimen name="px36">36px</dimen>
+    <dimen name="px52">52px</dimen>
+    <dimen name="px200">200px</dimen>
+    <dimen name="px80">80px</dimen>
+    <dimen name="px167">167px</dimen>
+    <dimen name="px181">181px</dimen>
+    <dimen name="px120">120px</dimen>
+    <dimen name="px100">100px</dimen>
+    <dimen name="px60">60px</dimen>
+    <dimen name="px92">92px</dimen>
+    <dimen name="px104">104px</dimen>
+    <dimen name="px10">10px</dimen>
+    <dimen name="px16">16px</dimen>
+    <dimen name="px18">18px</dimen>
+    <dimen name="px108">108px</dimen>
+    <dimen name="px180">180px</dimen>
+    <dimen name="px400">400px</dimen>
+    <dimen name="px300">300px</dimen>
+    <dimen name="px58">58px</dimen>
+    <dimen name="tab_select">36px</dimen>
+    <dimen name="tab_unselect">26px</dimen>
+
+</resources>

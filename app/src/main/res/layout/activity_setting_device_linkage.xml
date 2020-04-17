@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_marginTop="90px"
+            android:drawableLeft="@mipmap/icon_tag_linkage"
+            android:drawablePadding="10px"
+            android:gravity="center_vertical"
+            android:text="设备联动"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px80"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px">
+
+                <com.fotile.x1i.widget.StyleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="语音助手"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30px"/>
+
+                <!--开关-->
+                <Switch
+                    android:id="@+id/btn_switch_voice"
+                    android:layout_width="wrap_content"
+                    android:switchMinWidth="@dimen/px80"
+                    android:layout_height="@dimen/px40"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30px"
+                    android:textOn=""
+                    android:textOff=""
+                    android:thumb="@drawable/selector_setting_switch_thumb"
+                    android:track="@drawable/selector_setting_switch"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:background="@drawable/shape_item_divide_line"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:layout_marginTop="20px"
+                android:text="@string/str_tips_one"
+                android:textColor="#9A9A9A"
+                android:textSize="26px"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_box_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16px"
+                    android:layout_marginBottom="18px"
+                    android:background="@drawable/box_button_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/px44"
+                        android:layout_height="@dimen/px44"
+                        android:contentDescription="@null"
+                        android:src="@drawable/box_add_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px10"
+                        android:text="添加"
+                        android:textColor="@drawable/color_txt_select"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <com.fotile.x1i.widget.RotationLoadingView
+                    android:id="@+id/connect_loading_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/px16"
+                    android:layout_marginBottom="@dimen/px18"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/px16"
+                    android:layout_marginBottom="@dimen/px18"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_ok" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23px"
+                        android:text="已添加"
+                        android:textColor="#C8AF70"
+                        android:textSize="30px" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <!--烟灶联动title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:layout_marginTop="30px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.fotile.x1i.widget.StyleTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="烟灶联动"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30px"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_smoke_stove_tip"
+                        android:layout_width="44px"
+                        android:layout_height="44px"
+                        android:layout_marginStart="11px"
+                        android:src="@mipmap/icon_help"/>
+                </LinearLayout>
+                <!--旋转进度-->
+                <com.fotile.x1i.widget.RotationLoadingView
+                    android:id="@+id/search_loading_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15px"
+                    android:visibility="invisible"/>
+
+               <com.fotile.x1i.widget.StyleTextView
+                   android:textColor="#FFC8AF70"
+                   android:textSize="26px"
+                   android:layout_marginLeft="180px"
+                   android:text="该功能需要保持灶具与烟机同一wifi下"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+                <!--开关-->
+                <Switch
+                    android:layout_marginLeft="30px"
+                    android:id="@+id/btn_switch_stove"
+                    android:layout_width="wrap_content"
+                    android:switchMinWidth="@dimen/px80"
+                    android:layout_height="40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textOn=""
+                    android:textOff=""
+                    android:thumb="@drawable/selector_setting_switch_thumb"
+                    android:track="@drawable/selector_setting_switch"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:background="@drawable/shape_item_divide_line"/>
+
+            <com.fotile.x1i.widget.StyleTextView
+                android:id="@+id/tv_smoke_stove_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:layout_marginTop="20px"
+                android:text="当烟灶联动开启后，操作灶具时可以联动油烟机。"
+                android:textColor="#9A9A9A"
+                android:textSize="26px"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="181px"
+                android:layout_marginStart="181px"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="160px"
+                android:visibility="visible">
+                <!--灶具列表-->
+                <com.fotile.x1i.widget.setting.ScrollListView
+                    android:id="@+id/list_view_stove"
+                    android:layout_width="match_parent"
+                    android:layout_height="186px"
+                    android:divider="@color/transprant"
+                    android:dividerHeight="10px"
+                    android:visibility="gone"/>
+
+                <!--未搜索到灶具蓝牙-->
+                <LinearLayout
+                    android:id="@+id/layout_none_stove"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginTop="10px"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <com.fotile.x1i.widget.StyleTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="44px"
+                        android:gravity="center"
+                        android:text="未搜索到灶具蓝牙"
+                        android:textColor="#9A9A9A"
+                        android:textSize="26px"
+                        android:visibility="visible"/>
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:visibility="visible"/>
+
+                    <com.fotile.x1i.widget.StyleTextView
+                        android:id="@+id/tv_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44px"
+                        android:drawableLeft="@mipmap/icon_not_qrcode"
+                        android:drawablePadding="5px"
+                        android:gravity="center"
+                        android:text="重新搜索"
+                        android:textColor="#ffffff"
+                        android:textSize="26px"
+                        android:visibility="visible"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

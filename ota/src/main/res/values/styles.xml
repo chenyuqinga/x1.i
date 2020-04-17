@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="AppCustomTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/bg_ota_main</item>
+    </style>
+
+    <style name="top_snack_bar_anim_style">
+        <item name="android:windowEnterAnimation">@anim/notification_top_in</item>
+        <item name="android:windowExitAnimation">@anim/notification_top_out</item>
+    </style>
+
+
+    <!--黄色按钮属性-->
+    <style name="btn_style_select">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_txt_select</item>
+        <item name="android:background">@drawable/shape_button_select</item>
+        <item name="android:textSize">30px</item>
+    </style>
+
+    <style name="btn_style_normal">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/color_txt_select</item>
+        <item name="android:background">@drawable/shape_button_normal</item>
+        <item name="android:textSize">30px</item>
+    </style>
+</resources>

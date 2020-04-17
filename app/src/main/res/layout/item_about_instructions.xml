@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="180px"
+            android:layout_height="180px"
+            android:layout_marginTop="40px"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_instruction_book"/>
+
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="扫一扫，查看说明书"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+</LinearLayout>

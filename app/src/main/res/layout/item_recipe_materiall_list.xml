@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><!--菜谱详情材料清单布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="@dimen/px20"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80px"
+        android:text="@string/material_List"
+        android:textColor="@color/black_txt"
+        android:textSize="48px" />
+    <LinearLayout
+        android:layout_width="780px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--A料-->
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_Major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/material_major"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone"/>
+
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_major_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_Minor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/material_minor"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone" />
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_minor_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone"  />
+
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_typeA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/material_A"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone" />
+
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_typeA_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone"  />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_typeB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/material_B"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone" />
+
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_typeB_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone"  />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_typeC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="49dp"
+            android:text="@string/material_C"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone" />
+
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_typeC_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone"  />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_material_typeD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="49dp"
+            android:text="@string/material_D"
+            android:textColor="#FFC8AF70"
+            android:textSize="36px"
+            android:visibility="gone" />
+
+        <com.fotile.x1i.widget.MyListView
+            android:id="@+id/listView_typeD_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:divider="@null"
+            android:visibility="gone"  />
+
+    </LinearLayout>
+
+</LinearLayout>

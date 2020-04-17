@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fotile.music" >
+    <application >
+
+        <service
+            android:name=".manager.MusicService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ximalaya.ting.android.opensdk.player.service.XmPlayerService"
+            android:exported="true"
+            android:process=":player"/>
+        <meta-data
+            android:name="app_key"
+            android:value="3df82c7f78ccd66055e8642011864ddb"/>
+        <meta-data
+            android:name="pack_id"
+            android:value="com.fotile.c2i"/>
+    </application>
+</manifest>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题及搜索框栏-->
+    <RelativeLayout
+        android:id="@+id/rl_music_online_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px90">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_marginTop="5px"
+                android:id="@+id/iv_music_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_music_title" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_toRightOf="@id/iv_music_icon"
+                android:text="厨房电台"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <!--搜索-->
+        <FrameLayout
+            android:id="@+id/search_column"
+            android:layout_width="340px"
+            android:layout_height="60px"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60px"
+            android:background="@drawable/editext_round">
+
+            <ImageView
+                android:id="@+id/img_search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="22px"
+                android:src="@mipmap/btn_music_search" />
+
+            <TextView
+                android:id="@+id/ed_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="74px"
+                android:layout_marginRight="60px"
+                android:background="@null"
+                android:hint="@string/music_search_hint"
+                android:textColorHint="@color/search_history_hint_color"
+                android:textSize="26px" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <!--标签栏-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_category"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="170px"
+        android:overScrollMode="never"
+        app:tabIndicatorColor="@android:color/transparent" />
+
+    <!--列表-->
+    <LinearLayout
+        android:id="@+id/current_activity_content"
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:layout_below="@id/tabs_category"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="186px"
+        android:visibility="visible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_music_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--无网络提示-->
+    <LinearLayout
+        android:id="@+id/lLayout_music_tip_area"
+        android:layout_width="match_parent"
+        android:layout_height="430px"
+        android:layout_below="@id/tabs_category"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="186px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_internet_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:src="@mipmap/img_internet_off" />
+
+        <com.fotile.music.widget.ThinBoldTextView
+            android:id="@+id/tv_music_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40px"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_music_connect_network"
+            android:layout_width="170px"
+            android:layout_height="80px"
+            android:layout_marginTop="90px"
+            android:background="@drawable/shape_button_join"
+            android:gravity="center"
+            android:text="@string/str_connect_network"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"
+            android:visibility="visible" />
+        <!--刷新-->
+        <TextView
+            android:id="@+id/tv_music_refresh"
+            android:layout_width="170px"
+            android:layout_height="80px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="90px"
+            android:background="@drawable/bg_music_network"
+            android:gravity="center"
+            android:text="@string/str_refresh"
+            android:textColor="@drawable/color_txt_select"
+            android:textSize="30px"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/px100"
+        android:text="烟灶联动设置"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px36" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px40"
+        android:gravity="center"
+        android:text="您是否购买了方太以下型号的灶具:"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px40"
+        android:drawableTop="@mipmap/image_stove_x1"
+        android:drawablePadding="@dimen/px20"
+        android:gravity="center"
+        android:text="X1"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px80"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_no"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:text="否" />
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/tv_yes"
+            style="@style/BtnStyle"
+            android:layout_width="@dimen/px200"
+            android:layout_height="@dimen/px80"
+            android:layout_marginStart="@dimen/px120"
+            android:text="是" />
+
+    </LinearLayout>
+
+</LinearLayout>

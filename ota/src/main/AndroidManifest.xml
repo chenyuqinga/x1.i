@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.fotile.ota">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application>
+        <!--<activity-->
+        <!--android:nacom.fotile.ota.z15.fragment.OtaMainActivityityvity"-->
+        <!--android:theme="@style/AppCustomTheme">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<activity android:name=".fragment.OtaMainActivity"></activity>-->
+
+        <!--ota下载服务-->
+        <service android:name=".service.OtaDownLoadServer"></service>
+        <!--后台自动下载服务-->
+        <service android:name=".service.OtaAutoDownloadServer"></service>
+        <!--mcu下载服务-->
+        <service android:name=".service.McuDownLoadServer"></service>
+
+        <!--重启设备广播-->
+    </application>
+</manifest>

@@ -1,0 +1,6 @@
+## AndroidManifest.xml 中添加权限
+
+## 版本号 +1
+
+## OtaConstant中的变量修改为false
+

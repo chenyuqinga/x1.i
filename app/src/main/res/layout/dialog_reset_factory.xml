@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_ration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical">
+
+        <com.fotile.x1i.widget.RotationLoadingView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_rotaion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:icon_drawable="@mipmap/icon_rotation"/>
+
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="恢复出厂设置中..."
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="初始化中..."
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+
+        <ProgressBar
+            android:layout_marginTop="20px"
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="740px"
+            android:layout_height="14px"
+            android:max="100"
+            android:progress="0"/>
+    </LinearLayout>
+
+</RelativeLayout>

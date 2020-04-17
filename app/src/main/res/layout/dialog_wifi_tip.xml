@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingMultiplier="1.2"
+        android:gravity="center"
+        android:text="未联网情况下\n会影响较多功能的使用"
+        android:textColor="#ffffff"
+        android:layout_marginTop="380px"
+        android:textSize="30px"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="70px">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_jump"
+            style="@style/UnBtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:text="跳过"/>
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_set"
+            style="@style/BtnStyle"
+            android:layout_width="200px"
+            android:layout_height="80px"
+            android:layout_marginLeft="180px"
+            android:text="去设置"/>
+    </LinearLayout>
+
+</RelativeLayout>

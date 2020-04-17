@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_check_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="100px"
+        android:text="工厂自检模式"
+        android:textColor="#ffffff"
+        android:textSize="36px"/>
+
+    <LinearLayout
+        android:id="@+id/linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80px"
+        android:layout_marginLeft="120px"
+        android:layout_marginRight="120px"
+        android:layout_marginTop="80px"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--工作模式-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="工作模式"
+                android:textColor="#ffffff"
+                android:textSize="34px"/>
+
+            <TextView
+                android:id="@+id/txt_work_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textSize="34px"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:alpha="0.8"
+            android:background="#ffffff"/>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="85px"
+            android:cacheColorHint="#ffffffff"
+            android:divider="#66ffffff"
+            android:dividerHeight="0.8px"
+            android:scrollbars="none">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

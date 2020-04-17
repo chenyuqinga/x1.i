@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">music</string>
+    <string name="error_no_metadata">Unable to retrieve metadata.</string>
+    <string name="str_network_unavailable_tip">网络未连接</string>
+    <string name="music_search_history">历史搜索</string>
+    <string name="unknown_author">作者未知</string>
+</resources>

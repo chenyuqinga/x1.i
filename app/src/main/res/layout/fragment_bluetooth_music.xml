@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px80"
+        android:drawableLeft="@mipmap/icon_bluetooth_music"
+        android:drawablePadding="@dimen/px10"
+        android:gravity="center"
+        android:text="@string/item_quicktool_bluetooth"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80"
+        android:layout_marginStart="@dimen/px180"
+        android:layout_marginEnd="@dimen/px180"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝牙开关"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/px30" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <com.fotile.x1i.widget.SwitchButton
+            android:id="@+id/switch_bluetooth"
+            android:layout_width="@dimen/px90"
+            android:layout_height="@dimen/px40"
+            app:sb_background="@color/color_9a9a9a"
+            app:sb_button_color="#FFFFFF"
+            app:sb_checked="false"
+            app:sb_checked_color="@color/color_c8af70"
+            app:sb_show_indicator="false" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/px180"
+        android:layout_marginEnd="@dimen/px180"
+        android:background="@color/color_c8af70" />
+
+    <ListView
+        android:id="@+id/lv_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px400"
+        android:layout_marginStart="@dimen/px180"
+        android:layout_marginEnd="@dimen/px180"
+        android:divider="@color/color_666666"
+        android:dividerHeight="1px"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

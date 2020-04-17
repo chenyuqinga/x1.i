@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginTop="90px"
+        android:drawableLeft="@mipmap/icon_title_ble"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:text="蓝牙音乐"
+        android:textColor="#ffffff"
+        android:textSize="30px"/>
+
+    <RelativeLayout
+        android:layout_width="920px"
+        android:layout_height="80px"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:id="@+id/txt_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="蓝牙开关"
+            android:textColor="#ffffff"
+            android:textSize="30px"/>
+
+        <com.fotile.x1i.widget.RotationLoadingView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rotation_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15px"
+            android:layout_toRightOf="@+id/txt_left"
+            android:visibility="gone"
+            custom:icon_drawable="@mipmap/icon_rotation"/>
+
+        <Switch
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/selector_setting_switch_thumb"
+            android:track="@drawable/selector_setting_switch"/>
+
+        <!--覆盖Switch的位置，监听点击事件-->
+        <ImageView
+            android:id="@+id/img_cover"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="100px"
+            android:layout_height="40px"/>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="920px"
+        android:layout_height="1.2px"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFC8AF70"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="920px"
+        android:layout_height="380px"
+        android:divider="#FF666666"
+        android:dividerHeight="1px"
+        android:scrollbars="none">
+
+    </ListView>
+
+</LinearLayout>

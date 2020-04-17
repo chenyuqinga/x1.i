@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114px"
+        android:drawableLeft="@mipmap/icon_setting_title_lt"
+        android:drawablePadding="5px"
+        android:text="投屏"
+        android:textColor="#ffffff"
+        android:textSize="30px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginEnd="181px"
+        android:layout_marginStart="181px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.fotile.x1i.widget.StyleTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投屏开关"
+            android:textColor="@color/white_txt"
+            android:textSize="30px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Switch
+            android:visibility="gone"
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/selector_setting_switch_thumb"
+            android:track="@drawable/selector_setting_switch" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="181px"
+        android:layout_marginStart="181px"
+        android:background="@drawable/shape_item_divide_line" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/txt_lt_help"
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_marginEnd="181px"
+        android:layout_gravity="left"
+        android:layout_marginStart="181px"
+        android:layout_marginTop="20px"
+        android:text="如何将移动端视频投到烟机"
+        android:gravity="center_vertical"
+        android:textColor="#9A9A9A"
+        android:drawablePadding="10px"
+        android:drawableRight="@mipmap/icon_setting_title_help"
+        android:textSize="26px" />
+
+</LinearLayout>

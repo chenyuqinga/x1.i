@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="fotile.ble">
+
+    <!--需要硬件支持低功耗蓝牙-->
+    <uses-feature android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--蓝牙权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--Android 5.0以上蓝牙好需要位置权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="andriod.permission.ACCESS_FINE_LOCATION"/>
+
+    <application>
+        <!--<activity android:name=".activity.BleMainActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<activity android:name=".activity.BleListActivity"></activity>-->
+        <!--<activity android:name=".activity.BleLinkActivity"></activity>-->
+
+        <!--<service android:name=".service.ExampleLinkServer"></service>-->
+    </application>
+
+</manifest>

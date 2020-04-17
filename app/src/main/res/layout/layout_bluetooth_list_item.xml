@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px80"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px26" />
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <com.fotile.x1i.widget.StyleTextView
+        android:id="@+id/tv_link_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/px26"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_relink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@mipmap/icon_not_link"
+        android:visibility="gone" />
+
+    <com.fotile.x1i.widget.RotationLoadingView
+        android:id="@+id/rotation_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px10"
+        android:layout_marginEnd="@dimen/px10"
+        android:visibility="gone" />
+</LinearLayout>
