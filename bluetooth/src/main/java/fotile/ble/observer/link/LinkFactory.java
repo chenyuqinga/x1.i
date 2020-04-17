@@ -53,7 +53,7 @@ public class LinkFactory {
                     linkObserverable = new BleLinkObserverable(bleDevice, context);
                     bleLinkMap.put(deviceName, linkObserverable);
                 }
-               LogUtil.LOG_TOOTH("LinkFactory", "创建一个BLE连接-" + deviceName);
+//               LogUtil.LOG_TOOTH("LinkFactory", "创建一个BLE连接-" + deviceName);
             }
             //BT
             else {
@@ -63,7 +63,7 @@ public class LinkFactory {
                     linkObserverable = new BTLinkObserverable(bleDevice, context);
                     btLinkMap.put(deviceName, linkObserverable);
                 }
-               LogUtil.LOG_TOOTH("LinkFactory", "创建一个BT连接" + deviceName);
+//               LogUtil.LOG_TOOTH("LinkFactory", "创建一个BT连接" + deviceName);
             }
         }
         return linkObserverable;

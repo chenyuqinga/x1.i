@@ -525,13 +525,11 @@ public class BleServer extends Service {
     public void onDeviceClose(BleMessage bleMessage) {
         if (bleMessage.to_class.getSimpleName().contains("BleServer")) {
             if (bleMessage.blueToothType == BLE_MSG_CLOSE) {
-                ILinkObserverable linkObserverable = LinkFactory.getLinkObserverable(bleMessage.bleDevice, BleServer
-                        .this);
+                ILinkObserverable linkObserverable = LinkFactory.getLinkObserverable(bleMessage.bleDevice, BleServer.this);
                 if (null != linkObserverable) {
                     linkObserverable.disConnect();
-                    LogUtil.LOG_TOOTH("断开连接111", bleMessage );
                 }
-               LinkFactory.disConnectAllDevice();
+                LinkFactory.disConnectAllDevice();
 //                //取消心跳包导致的30秒延时
 //                StoveAction.getInstance().removeRetryWhat();
                 //取消Message

@@ -9,8 +9,6 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
-import android.widget.Toast;
 
 
 import com.fotile.common.util.log.LogUtil;
@@ -26,11 +24,9 @@ import rx.schedulers.Schedulers;
 
 import static fotile.ble.observer.link.ILinkObserverable.STATE_CONNECTED;
 import static fotile.ble.observer.link.ILinkObserverable.STATE_CONNECTING;
-import static fotile.ble.util.BleConstant.DEVICE_NAME_C2I;
 import static fotile.ble.bean.BleDevice.SEARCHING;
 import static fotile.ble.bean.BleDevice.SEARCHOVER;
 import static fotile.ble.observer.link.ILinkObserverable.STATE_NONE;
-import static fotile.ble.util.BleConstant.DEVICE_NAME_JAZ1;
 
 /**
  * 项目名称：BleClient
@@ -63,6 +59,7 @@ public class SearchObserverable implements ISearchObserverable {
      * 检测搜索，如果搜索结束并且还未到搜索时间，重启
      */
     private Timer timer_check = null;
+    Handler handler_delay = new Handler();
 
     private static SearchObserverable bleSearchObserverable;
 
@@ -186,6 +183,19 @@ public class SearchObserverable implements ISearchObserverable {
         context.registerReceiver(mBluetoothReceiver, filter);
     }
 
+    class DelayRunnable implements Runnable{
+        BleDevice bleDevice;
+        public DelayRunnable(BleDevice bleDevice){
+            this.bleDevice = bleDevice;
+        }
+        @Override
+        public void run() {
+            LogUtil.LOG_TOOTH("蓝牙搜索广播---延时7秒完成更新为已连接", "STATE_CONNECTED");
+            bleDevice.linkStatus = STATE_CONNECTED;
+            notifySearchData(bleDevice);
+        }
+    }
+
     /**
      * 蓝牙搜索广播
      */
@@ -193,29 +203,20 @@ public class SearchObserverable implements ISearchObserverable {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            Handler handler = new Handler();
-            final BluetoothDevice device1 = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-            final BleDevice bleDevice1 = new BleDevice(device1);
-            Runnable runnable = new Runnable() {
-                @Override
-                public void run() {
-                    LogUtil.LOG_TOOTH("蓝牙搜索广播---延时6200毫秒执行", device1.getName());
-                    bleDevice1.linkStatus = STATE_CONNECTED;
-                    notifySearchData(bleDevice1);
-                }
-            };
+//            LogUtil.LOG_TOOTH("蓝牙搜索广播----action", action);
+
             //每扫描到一个设备，系统都会发送此广播或者本地蓝牙名称发生变化
             if (BluetoothDevice.ACTION_FOUND.equals(action) || BluetoothDevice.ACTION_NAME_CHANGED.equals(action)) {
                 //获取蓝牙设备
                 BluetoothDevice bluetoothDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 String deviceName = bluetoothDevice.getName();
-                LogUtil.LOG_TOOTH("蓝牙搜索广播---搜索到的蓝牙", deviceName);
+//                LogUtil.LOG_TOOTH("蓝牙搜索广播---搜索到的蓝牙", deviceName);
                 //搜索到新蓝牙通知ui
                 notifySearchData(new BleDevice(bluetoothDevice, SEARCHING));
             }
             //蓝牙设备连接断开--蓝牙断电或者灶具断电（连接失败也会走这个广播）
             else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
-                handler.removeCallbacks(runnable);
+                handler_delay.removeCallbacksAndMessages(null);
                 //获取蓝牙设备
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 BleDevice bleDevice = new BleDevice(device);
@@ -234,16 +235,19 @@ public class SearchObserverable implements ISearchObserverable {
             }
             //蓝牙设备正在配对中
             else if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
-                LogUtil.LOG_TOOTH("蓝牙搜索广播----", "ACTION_BOND_STATE_CHANGED)" + intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1));
-                if (intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1) == BluetoothDevice.BOND_BONDING) {
-                    //获取蓝牙设备
-                    BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                    BleDevice bleDevice = new BleDevice(device);
+                //获取蓝牙设备
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                BleDevice bleDevice = new BleDevice(device);
+                int state = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1);
+
+                LogUtil.LOG_TOOTH("蓝牙搜索广播----", "ACTION_BOND_STATE_CHANGED) " + state);
+                if (state == BluetoothDevice.BOND_BONDING) {
                     bleDevice.linkStatus = STATE_CONNECTING;
                     notifySearchData(bleDevice);
                 }
-                if(intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1) == BluetoothDevice.BOND_BONDED){
-                    handler.postDelayed(runnable,6200);
+                if(state == BluetoothDevice.BOND_BONDED){
+                    LogUtil.LOG_TOOTH("蓝牙搜索广播---延时7秒更新链接状态", bleDevice.getName());
+                    handler_delay.postDelayed(new DelayRunnable(bleDevice),7000);
                 }
 
             }
@@ -296,6 +300,7 @@ public class SearchObserverable implements ISearchObserverable {
         //移除message
         handler.removeMessages(WHAT_BLUE_SEARCH_START);
         handler.removeMessages(WHAT_BLUE_SEARCH_CLOSE);
+        handler_delay.removeCallbacksAndMessages(null);
 
         //是否需要通知ui停止转圈
         if (notifyUi) {

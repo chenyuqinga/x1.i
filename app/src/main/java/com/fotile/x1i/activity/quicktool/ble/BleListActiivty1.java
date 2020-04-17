@@ -133,7 +133,7 @@ public class BleListActiivty1 extends BaseActivity implements CompoundButton.OnC
             @Override
             public synchronized void call(BleDevice bleDevice) {
                 int linkStatus = bleDevice.linkStatus;
-                LogUtil.LOG_TOOTH("BleSearchAction",linkStatus);
+//                LogUtil.LOG_TOOTH("BleSearchAction",linkStatus);
                 //搜索中
                 if (bleDevice.searchStatus == BleDevice.SEARCHING) {
                     showRotation(true);
@@ -146,7 +146,6 @@ public class BleListActiivty1 extends BaseActivity implements CompoundButton.OnC
                             list.add(bleDevice);
                             listAdapter.setList(list);
                             listAdapter.notifyDataSetChanged();
-                        LogUtil.LOG_TOOTH("BleSearchAction--搜索中",linkStatus+"---"+!listContain(bleDevice)+"----"+list);
                     }
 
                 }
@@ -169,7 +168,7 @@ public class BleListActiivty1 extends BaseActivity implements CompoundButton.OnC
                 }
                 //未连接或连接错误
                 else if (linkStatus  == ILinkObserverable.STATE_NONE || linkStatus == ILinkObserverable.STATE_ERROR){
-                    LogUtil.LOG_TOOTH("BleSearchAction--未连接或连接错误",linkStatus);
+//                    LogUtil.LOG_TOOTH("BleSearchAction--未连接或连接错误",linkStatus);
                     showRotation(false);
 
                     listAdapter.setList(list);
@@ -183,7 +182,7 @@ public class BleListActiivty1 extends BaseActivity implements CompoundButton.OnC
                 }
                 //配对正在连接中
                 else if(linkStatus  == ILinkObserverable.STATE_CONNECTING){
-                    LogUtil.LOG_TOOTH("BleSearchAction--连接中",linkStatus);
+//                    LogUtil.LOG_TOOTH("BleSearchAction--连接中",linkStatus);
                 }
                 //搜索结束
                 if (bleDevice.searchStatus == BleDevice.SEARCHOVER) {
@@ -374,13 +373,12 @@ public class BleListActiivty1 extends BaseActivity implements CompoundButton.OnC
         if (position >= 0 && position <= list.size() - 1) {
             BleDevice bleDevice = (BleDevice) listAdapter.getItem(position);
             if (null != bleDevice) {
-                LogUtil.LOG_TOOTH("蓝牙列表item状态---hasDeviceLinking", bleDevice.getName() + "：" + listAdapter.hasDeviceLinking());
                 //如果有设备正在连接
                 if (listAdapter.hasDeviceLinking()) {
                     return;
                 }
                 int linkState = listAdapter.getLinkState(position);
-                LogUtil.LOG_TOOTH("蓝牙列表item状态---linkState", bleDevice.getName() + "：" + linkState);
+//                LogUtil.LOG_TOOTH("蓝牙列表item状态---linkState", bleDevice.getName() + "：" + linkState);
 
                 // 点击处于已连接状态的灶具蓝牙 则提示是否关闭
                 if (linkState == ILinkObserverable.STATE_CONNECTED) {
