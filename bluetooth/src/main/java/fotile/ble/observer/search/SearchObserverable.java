@@ -249,7 +249,6 @@ public class SearchObserverable implements ISearchObserverable {
                     LogUtil.LOG_TOOTH("蓝牙搜索广播---延时7秒更新链接状态", bleDevice.getName());
                     handler_delay.postDelayed(new DelayRunnable(bleDevice),7000);
                 }
-
             }
             //扫描结束
             else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
